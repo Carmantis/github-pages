@@ -1,6 +1,6 @@
 title: Portfolio
 description: A collection of my projects and experiences
-baseurl: "github-pages"
+baseurl: "/github-pages"
 url: https://carmantis.github.io
 markdown: kramdown
 theme: minima
