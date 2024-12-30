@@ -58,14 +58,18 @@ body {
 
 /* Footer */
 footer {
-    text-align: center;
+    max-width: 800px; /* Sama leveys kuin pääsisällöllä */
+    margin: 20px auto; /* Keskittää footerin ja lisää tilaa yläpuolelle */
     padding: 20px;
-    background-color: #007acc;
+    background-color: #820df7; /* Footerin sininen tausta */
     color: white;
-    margin-top: 40px;
+    border-radius: 8px; /* Pyöristetyt kulmat */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hieno varjo footerille */
+    text-align: center; /* Keskittää tekstin footerin sisällä */
+    font-size: 0.9em; /* Hieman pienempi fonttikoko */
 }
 
-/* Headerin leveys ja keskitys */
+/* Header */
 .site-header {
     max-width: 800px; /* Sama leveys kuin pääsisällöllä */
     margin: 0 auto; /* Keskittää headerin */
@@ -105,3 +109,4 @@ footer {
 .site-nav a:hover {
     color: #ffcc00; /* Keltainen hover-efekti */
 }
+
