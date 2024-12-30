@@ -3,7 +3,7 @@
 /* Keskittää pääsisällön ja lisää tyhjät palkit */
 main {
     max-width: 800px; /* Määritä sisältöalueen leveys */
-    margin: 20 auto; /* Keskittää sisällön */
+    margin: 0px auto; /* Keskittää sisällön */
     padding: 20px; /* Lisää vähän tilaa reunoille */
     background-color: #776868; /* Valkoinen tausta sisällölle */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hieno varjo */
@@ -22,7 +22,7 @@ body {
 /* Header ja navigaatio */
 .site-header {
     max-width: 800px; /* Sama leveys kuin pääsisällöllä */
-    margin: 0 auto; /* Keskittää headerin */
+    margin: 10px auto; /* Keskittää headerin */
     padding: 20px;
     background-color: #820df7; /* Headerin sininen tausta */
     color: white;
@@ -61,7 +61,7 @@ body {
 /* Footer */
 footer {
     max-width: 800px; /* Sama leveys kuin pääsisällöllä */
-    margin: 20px auto; /* Keskittää footerin ja lisää tilaa yläpuolelle */
+    margin: 10px auto; /* Keskittää footerin ja lisää tilaa yläpuolelle */
     padding: 20px; /* Lisää tilaa reunoille */
     background-color: #820df7; /* Footerin sininen tausta */
     color: white; /* Valkoinen tekstiväri */
