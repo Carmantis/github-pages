@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Contact
+permalink: /contact/
 ---
-# Contact Me
+## Contact Me
 
 You can reach me through the following channels:
 
