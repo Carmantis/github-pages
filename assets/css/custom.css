@@ -64,3 +64,44 @@ footer {
     color: white;
     margin-top: 40px;
 }
+
+/* Headerin leveys ja keskitys */
+.site-header {
+    max-width: 800px; /* Sama leveys kuin pääsisällöllä */
+    margin: 0 auto; /* Keskittää headerin */
+    padding: 20px;
+    background-color: #820df7; /* Headerin sininen tausta */
+    color: white;
+    border-radius: 8px; /* Pyöristetyt kulmat */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hieno varjo headerille */
+}
+
+/* Headerin otsikko */
+.site-title a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+}
+
+/* Navigaatio säilyy flex-asetuksilla */
+.site-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Keskittää navigaation */
+}
+
+.site-nav li {
+    margin-right: 20px;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.site-nav a:hover {
+    color: #ffcc00; /* Keltainen hover-efekti */
+}
