@@ -3,7 +3,7 @@
 /* Keskittää pääsisällön ja lisää tyhjät palkit */
 main {
     max-width: 800px; /* Määritä sisältöalueen leveys */
-    margin: 0 auto; /* Keskittää sisällön */
+    margin: 20 auto; /* Keskittää sisällön */
     padding: 20px; /* Lisää vähän tilaa reunoille */
     background-color: #776868; /* Valkoinen tausta sisällölle */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hieno varjo */
