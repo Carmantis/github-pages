@@ -12,64 +12,14 @@ main {
 
 /* Sivuston taustaväri */
 body {
-    background-color: #232323; /* Vaaleanharmaa tausta */
+    background-color: #232323; /* Tummanharmaa tausta */
     font-family: Arial, sans-serif; /* Perusfontti */
-    color: #cac5c5; /* Tummanharmaa tekstiväri */
+    color: #faf8f8; /* Vaaleanharmaa tekstiväri */
     margin: 0;
     padding: 0;
 }
 
 /* Header ja navigaatio */
-.site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #007acc; /* Sininen tausta */
-    color: white;
-}
-
-.site-title a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.5em;
-}
-
-.site-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.site-nav li {
-    margin-right: 20px;
-}
-
-.site-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-.site-nav a:hover {
-    color: #ffcc00; /* Keltainen hover-efekti */
-}
-
-/* Footer */
-footer {
-    max-width: 800px; /* Sama leveys kuin pääsisällöllä */
-    margin: 20px auto; /* Keskittää footerin ja lisää tilaa yläpuolelle */
-    padding: 20px;
-    background-color: #820df7; /* Footerin sininen tausta */
-    color: white;
-    border-radius: 8px; /* Pyöristetyt kulmat */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hieno varjo footerille */
-    text-align: center; /* Keskittää tekstin footerin sisällä */
-    font-size: 0.9em; /* Hieman pienempi fonttikoko */
-}
-
-/* Header */
 .site-header {
     max-width: 800px; /* Sama leveys kuin pääsisällöllä */
     margin: 0 auto; /* Keskittää headerin */
@@ -80,14 +30,12 @@ footer {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hieno varjo headerille */
 }
 
-/* Headerin otsikko */
 .site-title a {
     text-decoration: none;
     color: white;
     font-size: 1.5em;
 }
 
-/* Navigaatio säilyy flex-asetuksilla */
 .site-nav ul {
     list-style: none;
     margin: 0;
@@ -110,3 +58,15 @@ footer {
     color: #ffcc00; /* Keltainen hover-efekti */
 }
 
+/* Footer */
+footer {
+    max-width: 800px; /* Sama leveys kuin pääsisällöllä */
+    margin: 20px auto; /* Keskittää footerin ja lisää tilaa yläpuolelle */
+    padding: 20px; /* Lisää tilaa reunoille */
+    background-color: #820df7; /* Footerin sininen tausta */
+    color: white; /* Valkoinen tekstiväri */
+    border-radius: 8px; /* Pyöristetyt kulmat */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hieno varjo footerille */
+    text-align: center; /* Keskittää tekstin footerin sisällä */
+    font-size: 0.9em; /* Hieman pienempi fonttikoko */
+}
