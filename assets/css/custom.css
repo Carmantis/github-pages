@@ -38,7 +38,7 @@ main {
     max-width: 800px; /* Määritä sisältöalueen leveys */
     margin: 0 auto; /* Keskittää sisällön */
     padding: 20px; /* Lisää vähän tilaa reunoille */
-    background-color: rgba(70, 36, 22, 0.9); /* Läpinäkyvä Caput Mortuum */
+    background-color: rgba(70, 36, 22, 0.5); /* Läpinäkyvä Caput Mortuum */
     color: #F6DBD1; /* Vaalea Sinopia teksti */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Varjo */
     border-radius: 8px; /* Pyöristetyt kulmat */
@@ -50,10 +50,11 @@ main {
     max-width: 800px; /* Sama leveys kuin pääsisällöllä */
     margin: 10px auto; /* Keskittää headerin */
     padding: 20px;
-    background-color: rgba(155, 57, 35, 0.9); /* Läpinäkyvä Engineering Orange */
+    background-color: rgba(155, 57, 35, 0.5);
     color: white;
-    border-radius: 8px; /* Pyöristetyt kulmat */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hieno varjo headerille */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
 }
 
 .site-title a {
@@ -67,7 +68,7 @@ main {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Keskittää navigaation */
+    justify-content: center;
 }
 
 .site-nav li {
@@ -81,35 +82,36 @@ main {
 }
 
 .site-nav a:hover {
-    color: #6a2d14; /* Vaalea hover-efekti */
+    color: #100f0f;
 }
 
 /* Footer */
 footer {
-    max-width: 800px; /* Sama leveys kuin pääsisällöllä */
-    margin: 10px auto; /* Keskittää footerin */
-    padding: 20px; /* Lisää tilaa reunoille */
-    background-color: rgba(155, 57, 35, 0.9); /* Sama väri kuin headerissa */
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: rgba(155, 57, 35, 0.5);
     color: white;
-    border-radius: 8px; /* Pyöristetyt kulmat */
-    text-align: center; /* Keskittää tekstin footerin sisällä */
-    font-size: 0.9em; /* Hieman pienempi fonttikoko */
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.9em;
+    backdrop-filter: blur(5px);
 }
 
-/* Linkit ja painikkeet */
+/* Linkis and buttons */
 a {
-    color: #C25427; /* Sinopia linkeille */
+    color: #C25427;
     text-decoration: none;
     font-weight: bold;
 }
 
 a:hover {
-    color: #E49475; /* Vaalea hover-efekti */
+    color: #E49475;
 }
 
 button {
-    background-color: #B93212; /* Engineering Orange */
-    color: #FFFFFF; /* Valkoinen teksti */
+    background-color: #B93212;
+    color: #FFFFFF;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -118,17 +120,26 @@ button {
 }
 
 button:hover {
-    background-color: #C25427; /* Sinopia hover-efekti */
+    background-color: #C25427;
 }
 
-/* Mobiililaitteiden optimointi */
+/* Mobile optimation */
 @media (max-width: 768px) {
     body {
-        background-size: contain; /* Skaalaa mobiililaitteissa */
-        background-position: center; /* Kohdistaa kuvan keskelle */
+        background-size: contain;
+        background-position: center;
     }
 
     main {
         padding: 10px;
     }
+}
+
+.logo {
+    transition: transform 0.5s ease-in-out; /* Rolling */
+}
+
+figure div ul {
+    list-style-type: disc;
+    margin-left: 20px;
 }
