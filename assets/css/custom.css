@@ -12,6 +12,13 @@ main {
     backdrop-filter: blur(5px); /* Hieno taustan sumennus */
 }
 
+@media (max-width: 768px) {
+    body {
+        background-size: contain; /* Skaalaa mobiililaitteissa */
+        background-position: center; /* Kohdistaa kuvan keskelle */
+    }
+}
+
 /* Parallax taustakuva */
 body {
     background: url('../images/background.jpg') no-repeat fixed;
@@ -20,6 +27,7 @@ body {
     color: #faf8f8; /* Vain tekstin väri */
     margin: 0;
     padding: 0;
+    background-attachment: fixed;
 }
 
 /* Header ja navigaatio */
