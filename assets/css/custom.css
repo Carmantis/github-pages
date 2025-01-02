@@ -3,20 +3,12 @@
 /* Keskittää pääsisällön ja lisää tyhjät palkit */
 main {
     max-width: 800px; /* Määritä sisältöalueen leveys */
-    margin: 0px auto; /* Keskittää sisällön */
+    margin: 0 auto; /* Keskittää sisällön */
     padding: 20px; /* Lisää vähän tilaa reunoille */
     background-color: rgba(119, 104, 104, 0.8); /* Läpinäkyvä tausta */
-    /*background-color: #776868; /* Valkoinen tausta sisällölle */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hieno varjo */
     border-radius: 8px; /* Pyöristetyt kulmat */
     backdrop-filter: blur(5px); /* Hieno taustan sumennus */
-}
-
-@media (max-width: 768px) {
-    body {
-        background-size: contain; /* Skaalaa mobiililaitteissa */
-        background-position: center; /* Kohdistaa kuvan keskelle */
-    }
 }
 
 /* Parallax taustakuva */
@@ -27,7 +19,46 @@ body {
     color: #faf8f8; /* Vain tekstin väri */
     margin: 0;
     padding: 0;
-    background-attachment: fixed;
+}
+
+/* Videon tausta */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Asettaa videon taustalle */
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Varmistaa videon olevan taustalla */
+}
+
+/* Sisältö videon päällä */
+main, .site-header, footer {
+    position: relative;
+    z-index: 1; /* Nostaa sisällön videon päälle */
+    background-color: rgba(119, 104, 104, 0.8); /* Läpinäkyvä tausta */
+    border-radius: 8px;
+}
+
+
+/* Mobiililaitteiden optimointi */
+@media (max-width: 768px) {
+    body {
+        background-size: contain; /* Skaalaa mobiililaitteissa */
+        background-position: center; /* Kohdistaa kuvan keskelle */
+    }
 }
 
 /* Header ja navigaatio */
@@ -74,10 +105,9 @@ footer {
     max-width: 800px; /* Sama leveys kuin pääsisällöllä */
     margin: 10px auto; /* Keskittää footerin ja lisää tilaa yläpuolelle */
     padding: 20px; /* Lisää tilaa reunoille */
-    background-color: #820df7; /* Footerin sininen tausta */
-    color: white; /* Valkoinen tekstiväri */
-    border-radius: 8px; /* Pyöristetyt kulmat */
     background-color: rgba(130, 13, 247, 0.9); /* Läpinäkyvä header/footer */
+    color: white;
+    border-radius: 8px; /* Pyöristetyt kulmat */
     text-align: center; /* Keskittää tekstin footerin sisällä */
     font-size: 0.9em; /* Hieman pienempi fonttikoko */
 }
