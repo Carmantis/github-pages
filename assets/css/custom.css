@@ -14,7 +14,7 @@ main {
 
 /* Parallax taustakuva */
 body {
-    background: url('/Portfolio/assets/images/background.jpg') no-repeat fixed;
+    background: url('{{ site.baseurl }}/assets/images/background.jpg') no-repeat fixed;
     background-size: cover;
     font-family: Arial, sans-serif;
     color: #faf8f8; /* Vain tekstin väri */
