@@ -1,13 +1,25 @@
 /* Custom CSS */
 
+/* Parallax taustakuva */
+body {
+    background: url('{{ site.baseurl }}/assets/images/background.jpg') no-repeat fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: #faf8f8; /* Vaaleanharmaa tekstiväri */
+    margin: 0;
+    padding: 0;
+}
+
 /* Keskittää pääsisällön ja lisää tyhjät palkit */
 main {
     max-width: 800px; /* Määritä sisältöalueen leveys */
     margin: 0px auto; /* Keskittää sisällön */
     padding: 20px; /* Lisää vähän tilaa reunoille */
-    background-color: #776868; /* Valkoinen tausta sisällölle */
+    background-color: rgba(119, 104, 104, 0.8); /* Läpinäkyvä tausta */
+    /*background-color: #776868; /* Valkoinen tausta sisällölle */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hieno varjo */
     border-radius: 8px; /* Pyöristetyt kulmat */
+    backdrop-filter: blur(5px); /* Hieno taustan sumennus */
 }
 
 /* Sivuston taustaväri */
@@ -24,7 +36,7 @@ body {
     max-width: 800px; /* Sama leveys kuin pääsisällöllä */
     margin: 10px auto; /* Keskittää headerin */
     padding: 20px;
-    background-color: #820df7; /* Headerin sininen tausta */
+    background-color: rgba(130, 13, 247, 0.9); /* Läpinäkyvä header/footer */
     color: white;
     border-radius: 8px; /* Pyöristetyt kulmat */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hieno varjo headerille */
@@ -66,7 +78,7 @@ footer {
     background-color: #820df7; /* Footerin sininen tausta */
     color: white; /* Valkoinen tekstiväri */
     border-radius: 8px; /* Pyöristetyt kulmat */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hieno varjo footerille */
+    background-color: rgba(130, 13, 247, 0.9); /* Läpinäkyvä header/footer */
     text-align: center; /* Keskittää tekstin footerin sisällä */
     font-size: 0.9em; /* Hieman pienempi fonttikoko */
 }
