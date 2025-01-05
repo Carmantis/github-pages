@@ -3,14 +3,15 @@ layout: default
 title: Contact
 permalink: /contact/
 ---
-## Contact Me
 
-You can reach me through the following channels:
+## You can reach me through the following channels:
 
-## Email
+<a href="mailto:aittokumpuh@gmail.com">
+    <img src="{{ site.baseurl }}/assets/icons/email.svg" alt="E-mail" class="icon">
+    E-mail
+</a>
 
-- [Email me]
-
-## Social Media
-
-- [LinkedIn]
+<a href="https://www.linkedin.com/in/heikki-aittokumpu" target="_blank">
+    <img src="{{ site.baseurl }}/assets/icons/linkedin.svg" alt="LinkedIn" class="icon">
+    LinkedIn
+</a>

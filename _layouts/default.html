@@ -17,8 +17,24 @@
     <main>
         {{ content }}
     </main>
-    <footer>
-        <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+            <ul class="footer-contacts">
+                <li>
+                    <a href="mailto:aittokumpuh@gmail.com">
+                        <img src="{{ site.baseurl }}/assets/icons/email.svg" alt="E-mail" class="icon">
+                        E-mail
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/heikki-aittokumpu" target="_blank">
+                        <img src="{{ site.baseurl }}/assets/icons/linkedin.svg" alt="LinkedIn" class="icon">
+                        LinkedIn
+                    </a>
+                </li>
+            </ul>
+        </div>
     </footer>
 </body>
 </html>
