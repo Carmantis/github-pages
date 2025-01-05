@@ -10,7 +10,7 @@ permalink: /tools/
     <span>Programming Languages - Show Wakatime</span>
   </button>
   <div id="wakatime-container" style="display: none; margin-top: 20px;">
-    <embed src="https://wakatime.com/share/@6b618539-0e05-404e-949c-e4bd225c514b/3893d6c8-0e15-4ad8-9f0b-3c0e19b01f3a.svg">
+    <embed src="https://wakatime.com/share/@6b618539-0e05-404e-949c-e4bd225c514b/41af378e-9a1c-4675-937b-6ba3d0330fa5.svg">
   </div>
 </figure>
 

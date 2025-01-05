@@ -38,7 +38,7 @@ main {
     max-width: 800px; /* Määritä sisältöalueen leveys */
     margin: 0 auto; /* Keskittää sisällön */
     padding: 20px; /* Lisää vähän tilaa reunoille */
-    background-color: rgba(70, 36, 22, 0.5); /* Läpinäkyvä Caput Mortuum */
+    background-color: rgba(70, 36, 22, 0.9); /* Läpinäkyvä Caput Mortuum */
     color: #F6DBD1; /* Vaalea Sinopia teksti */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Varjo */
     border-radius: 8px; /* Pyöristetyt kulmat */
@@ -47,6 +47,8 @@ main {
 
 /* Header ja navigaatio */
 .site-header {
+    display: flex;
+    flex-direction: column;
     max-width: 800px; /* Sama leveys kuin pääsisällöllä */
     margin: 10px auto; /* Keskittää headerin */
     padding: 20px;
@@ -55,6 +57,63 @@ main {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 100px; /* Pienennetään logoa */
+    }
+
+    .profile-image {
+        width: 60px; /* Pienennetään profiilikuvaa */
+        height: 60px;
+    }
+
+    .header-content {
+        flex-direction: column; /* Siirretään logo ja profiilikuva pystysuuntaan */
+    }
+}
+
+/* Logo ja profiilikuva */
+.header-content {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 150px; /* Väli elementtien välillä */
+}
+
+/* Logo tyyli */
+.logo {
+    width: 400px; /* Skaalaa logoa */
+    height: auto;
+}
+
+/* Profiilikuva tyyli */
+.profile-image {
+    width: 80px; /* Kuvan halkaisija */
+    height: 80px; /* Sama kuin leveys */
+    border-radius: 50%; /* Pyöristetyt reunat */
+    border: 3px solid #820df7; /* Kehyksen väri */
+    object-fit: cover; /* Kuva täyttää ympyrän ilman venytystä */
+}
+
+/* Navigaatio keskitetty */
+.site-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-image {
+    width: 80px; /* Kuvan halkaisija */
+    height: 80px; /* Sama kuin leveys */
+    border-radius: 50%; /* Pyöristää kuvan reunoista täydellisesti ympyräksi */
+    border: 3px solid #090809; /* Kehyksen väri */
+    object-fit: cover; /* Säilyttää mittasuhteet ja täyttää ympyrän */
+    margin-left: 20px; /* Väli logon ja kuvan välillä */
 }
 
 .site-title a {
