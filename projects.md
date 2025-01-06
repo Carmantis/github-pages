@@ -4,9 +4,7 @@ title: Projects
 permalink: /projects/
 ---
 
-### Here are some projects I've worked on, available through these links. Some projects are private and available upon request. In my GitHub repository, you can find more public projects.
-
-
+### Here are some of the projects I've worked on, available via the links below. Some projects are private and available upon request. In my GitHub repository you can find more public projects.
 
 <!-- Data Processing -->
 <figure>
@@ -16,7 +14,7 @@ permalink: /projects/
   </button>
   <div id="data-processing-container" style="display: none; margin-top: 20px;">
     <p>
-    <h1>Data Management in Indoor Positioning</h1>
+    <h2>Data Management in Indoor Positioning</h2>
       <p>
         This project focused on developing a system infrastructure for collecting, processing, and analyzing indoor positioning data. The key goal was to enable efficient handling of historical location data and visualize it for decision-making purposes.
       </p>
@@ -49,7 +47,7 @@ permalink: /projects/
 
       <h2>Challenges and Solutions</h2>
       <p>
-        Handling large datasets posed memory and performance challenges. These were mitigated by optimizing data queries, using efficient algorithms, and reducing data density (e.g., selecting every nth row for plotting).
+        Handling large datasets posed memory and performance challenges. These were mitigated by optimizing data queries, using efficient algorithms, and reducing data density.
         Additionally, iterative development under the <strong>Scrum framework</strong> helped adapt to evolving requirements and address bottlenecks effectively.
       </p>
 

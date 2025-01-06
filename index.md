@@ -3,11 +3,11 @@ layout: default
 title: Home
 permalink: /
 ---
-## Welcome to my portfolio site
+## Welcome to my portfolio
 
 ## About Me
 
-I am second-year student at the University of Kajaani, studying AI and data engineering. I am passionate about data and machine learning methods. Currently working on a project that involves data processing and machine learning.
+I am a second-year student at the University of Kajaani, studying AI and data engineering. I am passionate about data and machine learning methods. Currently working on a project that involves data processing and machine learning.
 
 ## Education
 
