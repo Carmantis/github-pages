@@ -1,62 +1,48 @@
 /* Custom CSS */
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Yleinen tausta ja fontti */
 body {
     font-family: Arial, sans-serif;
     color: #faf8f8; /* Valkoinen teksti */
     margin: 0;
     padding: 0;
-    background: linear-gradient(180deg, #231207, #462416); /* Tumma gradientti */
-}
-
-/* Videon tausta */
-.video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1; /* Asettaa videon taustalle */
-}
-
-.video-background video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1; /* Varmistaa videon olevan taustalla */
-    object-fit: cover; /* Peittää koko taustan */
+    background: linear-gradient(180deg, #3B1C32, #1A1A1D); /* Tumma gradientti */
 }
 
 /* Keskittää pääsisällön ja lisää tyylit */
 main {
-    max-width: 800px; /* Määritä sisältöalueen leveys */
-    margin: 0 auto; /* Keskittää sisällön */
-    padding: 20px; /* Lisää vähän tilaa reunoille */
-    background-color: rgba(70, 36, 22, 0.9); /* Läpinäkyvä Caput Mortuum */
-    color: #F6DBD1; /* Vaalea Sinopia teksti */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Varjo */
-    border-radius: 8px; /* Pyöristetyt kulmat */
-    backdrop-filter: blur(5px); /* Hieno taustan sumennus */
+    margin-top: 180px; /* Tilaa headerille */
+    margin-bottom: 110px; /* Tilaa footerille */
+    max-width: 800px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #33152b; /* Läpinäkyvä tausta */
+    color: #F6DBD1;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    overflow-y: auto; /* Varmistaa vierityksen toimivuuden */
 }
 
-/* Header ja navigaatio */
+/* Header*/
 .site-header {
-    display: flex;
-    flex-direction: column;
-    max-width: 800px; /* Sama leveys kuin pääsisällöllä */
-    margin: 10px auto; /* Keskittää headerin */
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* Skaalaa koko ruudun leveydelle */
+    max-width: 800px; /* Rajoittaa enimmäisleveyden */
+    margin: 0 auto;
     padding: 20px;
     background-color: rgba(155, 57, 35, 0.5);
-    color: white;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
+    z-index: 1000;
 }
 
 @media (max-width: 768px) {
@@ -84,7 +70,7 @@ main {
 
 /* Logo tyyli */
 .logo {
-    width: 400px;
+    width: 150px;
     height: auto;
     transition: transform 0.5s ease-in-out;
 }
@@ -92,12 +78,12 @@ main {
 /* Navigaatio keskitetty */
 
 .profile-image {
-    width: 80px; /* Kuvan halkaisija */
-    height: 80px; /* Sama kuin leveys */
+    width: 110px; /* Kuvan halkaisija */
+    height: 110px; /* Sama kuin leveys */
     border-radius: 50%; /* Pyöristää kuvan reunoista täydellisesti ympyräksi */
     border: 3px solid #090809; /* Kehyksen väri */
     object-fit: cover; /* Säilyttää mittasuhteet ja täyttää ympyrän */
-    margin-left: 20px; /* Väli logon ja kuvan välillä */
+    margin: -150px; /* Väli logon ja kuvan välillä */
 }
 
 .site-title a {
@@ -129,16 +115,22 @@ main {
 }
 
 /* Footer */
-footer {
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
     max-width: 800px;
-    margin: 10px auto;
-    color: white; /* Tekstin väri */
+    margin: 0 auto;
+    color: white;
     padding: 20px;
     background-color: rgba(155, 57, 35, 0.5);
     border-radius: 8px;
     text-align: center;
     font-size: 0.9em;
     backdrop-filter: blur(5px);
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.5);
 }
 
 /* Footerin sisältö */
@@ -167,18 +159,18 @@ footer {
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 8px; /* Väli ikonin ja tekstin välillä */
+    gap: 8px;
     font-weight: bold;
 }
 
 .footer-contacts a:hover {
-    color: #050505; /* Hover-efekti */
+    color: #050505;
 }
 
-/* Footerin ikonit */
+/* Footeri icons */
 .icon {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     fill: currentColor;
 }
 
@@ -228,10 +220,10 @@ figure div ul {
 
 .projects-page figure {
     margin-bottom: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #F6DBD1;
     border-radius: 5px;
     padding: 15px;
-    background-color: #f9f9f9;
+    background-color: #F6DBD1;
 }
 
 .projects-page button {
@@ -249,7 +241,9 @@ figure div ul {
 }
 
 .projects-page button:hover {
-    background-color: #e8e8e8;
+    background-color: #C25427; /* Korosta taustaväriä hover-tilassa */
+    color: #0f0e0e; /* Vaihda tekstin väri valkoiseksi */
+    transition: background-color 0.3s ease; /* Lisää sulava siirtymä */
 }
 
 .projects-page .logo {
@@ -260,6 +254,6 @@ figure div ul {
 
 .projects-page div {
     margin-top: 10px;
-    color: #555;
+    color: #F6DBD1;
     display: none; /* Piilottaa sisältö oletuksena */
 }

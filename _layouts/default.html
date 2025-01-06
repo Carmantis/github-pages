@@ -6,41 +6,35 @@
     <title>{{ page.title }} | {{ site.title }}</title>
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/custom.css">
 </head>
-<body>
-    <div class="video-background" style="background-image: url('{{ site.baseurl }}/assets/images/background.jpg');">
-        <video autoplay muted loop>
-            <source src="{{ site.baseurl }}/assets/videos/background.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-    {% include header.html %}
-    <main>
-        {{ content }}
-    </main>
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
-            <ul class="footer-contacts">
-                <li>
-                    <a href="mailto:aittokumpuh@gmail.com">
-                        <img src="{{ site.baseurl }}/assets/icons/email.svg" alt="E-mail" class="icon">
-                        E-mail
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/heikki-aittokumpu" target="_blank">
-                        <img src="{{ site.baseurl }}/assets/icons/linkedin.svg" alt="LinkedIn" class="icon">
-                        LinkedIn
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/Carmantis" target="_blank">
-                        <img src="{{ site.baseurl }}/assets/icons/github.svg" alt="Github" class="icon">
-                        Github
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </footer>
-</body>
+    <body>
+        {% include header.html %}
+        <main>
+            {{ content }}
+        </main>
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+                <ul class="footer-contacts">
+                    <li>
+                        <a href="mailto:aittokumpuh@gmail.com">
+                            <img src="{{ site.baseurl }}/assets/icons/email.svg" alt="E-mail" class="icon">
+                            E-mail
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/heikki-aittokumpu" target="_blank">
+                            <img src="{{ site.baseurl }}/assets/icons/linkedin.svg" alt="LinkedIn" class="icon">
+                            LinkedIn
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Carmantis" target="_blank">
+                            <img src="{{ site.baseurl }}/assets/icons/github.svg" alt="Github" class="icon">
+                            Github
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </body>
 </html>
