@@ -28,6 +28,54 @@ main {
     overflow-y: auto; /* Varmistaa vierityksen toimivuuden */
 }
 
+/* Mobiililaitteille alle 768px */
+@media (max-width: 768px) {
+    .site-header, .footer {
+        width: calc(100% - 20px); /* Käytä lähes koko näytön leveyttä */
+        padding: 10px; /* Pienennä padding-arvoa */
+        font-size: 0.9em; /* Pienennä fonttikokoa */
+    }
+
+    /* Headerin sisällön keskitys pystysuunnassa */
+    .header-content {
+        display: flex;
+        flex-direction: column; /* Siirrä elementit pystysuuntaan */
+        gap: 10px; /* Pieni väli elementtien välillä */
+        text-align: center; /* Keskitetään teksti */
+    }
+
+    /* Profiilikuva ja logo */
+    .profile-image {
+        width: 60px; /* Pienempi profiilikuva */
+        height: 60px;
+    }
+
+    .logo {
+        width: 120px; /* Skaalattu logo */
+        height: auto;
+    }
+
+    /* Navigaatio */
+    .site-nav ul {
+        flex-direction: column; /* Aseta navigaation linkit pystysuuntaan */
+        gap: 5px;
+    }
+
+    .site-nav li {
+        margin: 0; /* Poista marginaali */
+    }
+
+    /* Footerin sisältö */
+    .footer-contacts {
+        flex-direction: column; /* Aseta kontaktit pystysuuntaan */
+        gap: 10px;
+    }
+
+    .footer-contacts a {
+        font-size: 0.8em; /* Pienempi fonttikoko */
+    }
+}
+
 /* Header*/
 .site-header {
     position: fixed;
