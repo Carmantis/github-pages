@@ -28,6 +28,13 @@ main {
     overflow-y: auto; /* Varmistaa vierityksen toimivuuden */
 }
 
+.site-header, .footer {
+    width: 90%; /* Skaalaa 90% näytön leveydestä */
+    max-width: 800px; /* Rajoita enimmäisleveys */
+    padding: 10px 15px; /* Vähennä sisäistä tilaa */
+    border-radius: 6px; /* Hieman pienemmät pyöristetyt kulmat */
+}
+
 /* Mobiililaitteille alle 768px */
 @media (max-width: 768px) {
     .site-header, .footer {
