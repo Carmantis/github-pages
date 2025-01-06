@@ -3,6 +3,9 @@ layout: default
 title: Tools
 permalink: /tools/
 ---
+
+## Here are some tools I use, available through these links.
+
 <!-- Wakatime -->
 <figure>
   <button id="toggle-wakatime" style="display: flex; align-items: center; border: none; background: none; cursor: pointer;">
