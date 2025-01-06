@@ -4,93 +4,37 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Yleinen tausta ja fontti */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    color: #faf8f8; /* Valkoinen teksti */
+    color: #faf8f8;
     margin: 0;
     padding: 0;
-    background: linear-gradient(180deg, #3B1C32, #1A1A1D); /* Tumma gradientti */
+    background: linear-gradient(180deg, #3B1C32, #1A1A1D);
 }
 
-/* Keskittää pääsisällön ja lisää tyylit */
 main {
-    margin-top: 180px; /* Tilaa headerille */
-    margin-bottom: 110px; /* Tilaa footerille */
+    margin-top: 180px;
+    margin-bottom: 110px;
     max-width: 800px;
     padding: 20px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #33152b; /* Läpinäkyvä tausta */
+    background-color: #33152b;
     color: #F6DBD1;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    overflow-y: auto; /* Varmistaa vierityksen toimivuuden */
+    overflow-y: auto;
 }
 
-.site-header, .footer {
-    width: 90%; /* Skaalaa 90% näytön leveydestä */
-    max-width: 800px; /* Rajoita enimmäisleveys */
-    padding: 10px 15px; /* Vähennä sisäistä tilaa */
-    border-radius: 6px; /* Hieman pienemmät pyöristetyt kulmat */
-}
-
-/* Mobiililaitteille alle 768px */
-@media (max-width: 768px) {
-    .site-header, .footer {
-        width: calc(100% - 20px); /* Käytä lähes koko näytön leveyttä */
-        padding: 10px; /* Pienennä padding-arvoa */
-        font-size: 0.9em; /* Pienennä fonttikokoa */
-    }
-
-    /* Headerin sisällön keskitys pystysuunnassa */
-    .header-content {
-        display: flex;
-        flex-direction: column; /* Siirrä elementit pystysuuntaan */
-        gap: 10px; /* Pieni väli elementtien välillä */
-        text-align: center; /* Keskitetään teksti */
-    }
-
-    /* Profiilikuva ja logo */
-    .profile-image {
-        width: 60px; /* Pienempi profiilikuva */
-        height: 60px;
-    }
-
-    .logo {
-        width: 120px; /* Skaalattu logo */
-        height: auto;
-    }
-
-    /* Navigaatio */
-    .site-nav ul {
-        flex-direction: column; /* Aseta navigaation linkit pystysuuntaan */
-        gap: 5px;
-    }
-
-    .site-nav li {
-        margin: 0; /* Poista marginaali */
-    }
-
-    /* Footerin sisältö */
-    .footer-contacts {
-        flex-direction: column; /* Aseta kontaktit pystysuuntaan */
-        gap: 10px;
-    }
-
-    .footer-contacts a {
-        font-size: 0.8em; /* Pienempi fonttikoko */
-    }
-}
-
-/* Header*/
+/* Header Styles */
 .site-header {
     position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%; /* Skaalaa koko ruudun leveydelle */
-    max-width: 800px; /* Rajoittaa enimmäisleveyden */
+    width: 100%;
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     background-color: rgba(155, 57, 35, 0.5);
@@ -100,76 +44,63 @@ main {
     z-index: 1000;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .site-header {
+        width: 90%;
+        padding: 10px;
+    }
+
     .logo {
-        width: 100px; /* Pienennetään logoa */
+        width: 100px;
     }
 
     .profile-image {
-        width: 60px; /* Pienennetään profiilikuvaa */
+        width: 60px;
         height: 60px;
     }
 
     .header-content {
-        flex-direction: column; /* Siirretään logo ja profiilikuva pystysuuntaan */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .footer {
+        width: 90%;
+        padding: 10px;
     }
 }
 
-/* Logo ja profiilikuva */
+/* Logo and Profile Image */
 .header-content {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 150px; /* Väli elementtien välillä */
 }
 
-/* Logo tyyli */
 .logo {
     width: 150px;
     height: auto;
     transition: transform 0.5s ease-in-out;
 }
 
-/* Navigaatio keskitetty */
-
 .profile-image {
-    width: 110px; /* Kuvan halkaisija */
-    height: 110px; /* Sama kuin leveys */
-    border-radius: 50%; /* Pyöristää kuvan reunoista täydellisesti ympyräksi */
-    border: 3px solid #090809; /* Kehyksen väri */
-    object-fit: cover; /* Säilyttää mittasuhteet ja täyttää ympyrän */
-    margin: -150px; /* Väli logon ja kuvan välillä */
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid #090809;
+    object-fit: cover;
 }
 
-.site-title a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.5em;
-}
-
-.site-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.site-nav li {
-    margin-right: 20px;
-}
-
-.site-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-.site-nav a:hover {
-    color: #100f0f;
-}
-
-/* Footer */
+/* Footer Styles */
 .footer {
     position: fixed;
     bottom: 0;
@@ -188,13 +119,6 @@ main {
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.5);
 }
 
-/* Footerin sisältö */
-.footer-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Yhteystiedot */
 .footer-contacts {
     list-style: none;
     padding: 0;
@@ -222,14 +146,13 @@ main {
     color: #050505;
 }
 
-/* Footeri icons */
 .icon {
     width: 40px;
     height: 40px;
     fill: currentColor;
 }
 
-/* Linkis and buttons */
+/* Links and Buttons */
 a {
     color: #C25427;
     text-decoration: none;
@@ -254,61 +177,23 @@ button:hover {
     background-color: #C25427;
 }
 
-/* Mobile optimation */
-@media (max-width: 768px) {
-    body {
-        background-size: contain;
-        background-position: center;
-    }
-
-    main {
-        padding: 10px;
-    }
+/* Utility Classes */
+.hidden {
+    display: none;
 }
 
-figure div ul {
-    list-style-type: disc;
-    margin-left: 20px;
+.visible {
+    display: block;
 }
 
-/* Project page */
-
-.projects-page figure {
-    margin-bottom: 20px;
-    border: 1px solid #F6DBD1;
-    border-radius: 5px;
-    padding: 15px;
-    background-color: #F6DBD1;
+/* Grid Layout */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
-.projects-page button {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #333;
-    display: flex;
-    align-items: center;
-    text-align: left;
-    width: 100%;
-    padding: 10px;
-    border: none;
-    background: none;
-    cursor: pointer;
-}
-
-.projects-page button:hover {
-    background-color: #C25427; /* Korosta taustaväriä hover-tilassa */
-    color: #0f0e0e; /* Vaihda tekstin väri valkoiseksi */
-    transition: background-color 0.3s ease; /* Lisää sulava siirtymä */
-}
-
-.projects-page .logo {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-}
-
-.projects-page div {
-    margin-top: 10px;
-    color: #F6DBD1;
-    display: none; /* Piilottaa sisältö oletuksena */
+img {
+    max-width: 100%;
+    height: auto;
 }
