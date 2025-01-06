@@ -38,7 +38,7 @@ main {
     max-width: 800px; /* Määritä sisältöalueen leveys */
     margin: 0 auto; /* Keskittää sisällön */
     padding: 20px; /* Lisää vähän tilaa reunoille */
-    background-color: rgba(70, 36, 22, 0.5); /* Läpinäkyvä Caput Mortuum */
+    background-color: rgba(70, 36, 22, 0.9); /* Läpinäkyvä Caput Mortuum */
     color: #F6DBD1; /* Vaalea Sinopia teksti */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Varjo */
     border-radius: 8px; /* Pyöristetyt kulmat */
@@ -47,6 +47,8 @@ main {
 
 /* Header ja navigaatio */
 .site-header {
+    display: flex;
+    flex-direction: column;
     max-width: 800px; /* Sama leveys kuin pääsisällöllä */
     margin: 10px auto; /* Keskittää headerin */
     padding: 20px;
@@ -55,6 +57,47 @@ main {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 100px; /* Pienennetään logoa */
+    }
+
+    .profile-image {
+        width: 60px; /* Pienennetään profiilikuvaa */
+        height: 60px;
+    }
+
+    .header-content {
+        flex-direction: column; /* Siirretään logo ja profiilikuva pystysuuntaan */
+    }
+}
+
+/* Logo ja profiilikuva */
+.header-content {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 150px; /* Väli elementtien välillä */
+}
+
+/* Logo tyyli */
+.logo {
+    width: 400px;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Navigaatio keskitetty */
+
+.profile-image {
+    width: 80px; /* Kuvan halkaisija */
+    height: 80px; /* Sama kuin leveys */
+    border-radius: 50%; /* Pyöristää kuvan reunoista täydellisesti ympyräksi */
+    border: 3px solid #090809; /* Kehyksen väri */
+    object-fit: cover; /* Säilyttää mittasuhteet ja täyttää ympyrän */
+    margin-left: 20px; /* Väli logon ja kuvan välillä */
 }
 
 .site-title a {
@@ -89,13 +132,54 @@ main {
 footer {
     max-width: 800px;
     margin: 10px auto;
+    color: white; /* Tekstin väri */
     padding: 20px;
     background-color: rgba(155, 57, 35, 0.5);
-    color: white;
     border-radius: 8px;
     text-align: center;
     font-size: 0.9em;
     backdrop-filter: blur(5px);
+}
+
+/* Footerin sisältö */
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Yhteystiedot */
+.footer-contacts {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-contacts li {
+    display: flex;
+    align-items: center;
+}
+
+.footer-contacts a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Väli ikonin ja tekstin välillä */
+    font-weight: bold;
+}
+
+.footer-contacts a:hover {
+    color: #050505; /* Hover-efekti */
+}
+
+/* Footerin ikonit */
+.icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
 }
 
 /* Linkis and buttons */
@@ -135,11 +219,47 @@ button:hover {
     }
 }
 
-.logo {
-    transition: transform 0.5s ease-in-out; /* Rolling */
-}
-
 figure div ul {
     list-style-type: disc;
     margin-left: 20px;
+}
+
+/* Project page */
+
+.projects-page figure {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.projects-page button {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.projects-page button:hover {
+    background-color: #e8e8e8;
+}
+
+.projects-page .logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.projects-page div {
+    margin-top: 10px;
+    color: #555;
+    display: none; /* Piilottaa sisältö oletuksena */
 }
