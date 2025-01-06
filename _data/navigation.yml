@@ -1,8 +1,6 @@
-- title: Home
-  url: /
+- title: About Me
+  url: /#about
 - title: Projects
-  url: /projects/
+  url: /#projects
 - title: Tools
-  url: /tools/
-- title: Contacts
-  url: /contact/
+  url: /#tools
